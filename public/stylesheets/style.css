@@ -1,0 +1,168 @@
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #191C1B;
+    color: white;
+}
+
+a {
+    color: #696969;
+    text-decoration: underline;
+}
+
+li a {
+    color: #939393;
+}
+
+#header li a {
+    text-decoration: none;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2E302E;
+}
+
+#header li {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#header .right {
+    float: right;
+}
+
+#main {
+    font-size: 20px;
+    align-content: center;
+    text-align: center;
+    margin: 50px;
+    background-color: #1D2120;
+}
+
+#main p {
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+#main .alias{
+    font-style: italic;
+    font-size: 16px;
+    opacity: .2;
+}
+
+#lrmain {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#lmain {
+    float: left;
+    width: 50%;
+}
+
+#rmain {
+    float: right;
+    width: 50%;
+}
+
+#maindata {
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    font-size: 13px;
+}
+
+#maindata th, #maindata td {
+    text-align: left;
+    border-left: 1px solid #ddd;
+    padding-left: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#maindata tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#maindata tr.tablehead, #maindata tr:hover {
+    background-color: #2E302E;
+}
+
+#tablesearch {
+    width: 90%;
+    color: #FFFFFF;
+    background-color: #2E302E;
+    padding: 4px 4px;
+}
+
+#quik td {
+    border-left: 1px solid #ddd;
+}
+
+#quik td:first-child {
+    border-left: none;
+}
+
+.daycnt {
+    width: 20px;
+}
+
+.stats {
+    float: left;
+}
+
+.stats li {
+    float: left;
+}
+
+
+/* tables */
+
+table.tablesorter {
+    font-family: arial;
+    margin: 10px 0pt 15px;
+    font-size: 12pt;
+    width: 100%;
+    text-align: left;
+}
+
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+    border: 1px solid #FFF;
+    font-size: 12pt;
+    padding: 4px;
+}
+
+table.tablesorter thead tr .header {
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+
+table.tablesorter tbody td {
+    padding: 4px;
+    vertical-align: top;
+}
+
+table.tablesorter thead tr .headerSortUp {
+    background-image: url(asc.png);
+}
+
+table.tablesorter thead tr .headerSortDown {
+    background-image: url(desc.png);
+}
+
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+    background-color: #464946;
+}

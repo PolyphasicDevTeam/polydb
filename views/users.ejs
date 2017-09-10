@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<% include partials/head %>
+</head>
+<body>
+    <% include partials/topbar %>
+    <div id="content">
+        <div id="main">
+            <div id="lmain">
+<h1>Users</h1>
+<div class="output"></div>
+
+</div>
+</div>
+</div>
+
+<div class="secrat" style="display:none;"><%= users %></div>
+<script>
+$('document').ready(function(){
+    $('.output').html('<ul>'+$('.secrat').text()+'</ul>')
+})
+</script>
+</body>
+</html>

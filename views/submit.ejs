@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include partials/head.ejs %>
+
+  <style>
+  body p{
+      font-weight:bold;
+      font-size: 16px;
+  }
+  .question{
+      display:none;
+  }
+  .back{
+      margin-left: 250px;
+
+  }
+  .next{
+      margin-right: 250px;
+  }
+  .nav{
+      width:74px;
+      text-align: center;
+      padding-left: 0px;
+  }
+  </style>
+</head>
+
+<body>
+  <% include partials/topbar.ejs %>
+
+  <div id="content">
+    <div id="main">
+
+      <h1>Share your experience</h1>
+      <p style="font-weight:normal;">Once you complete this form, we will enter your information (anonymously) into our database. Your experience will be used to help calculate the difficulty, popularity, and other statistics about schedules. This site wouldnt be possible without people like you!</p>
+
+      <div id="llmain">
+
+      </div>
+
+    </div>
+  </div>
+
+<div class='hidden' style='display:none;'>
+<%=form%>
+</div>
+<script>
+$(document).ready(function(){
+    $('#llmain').html($('.hidden').text())
+    $('.active').show()
+    $('.back').hide()
+    qnum = $('.qnum').html()*1
+
+    $('.next').click(function(){
+        numb = $('.active').data('num')*1
+        if(numb == qnum-1){
+            $(this).hide()
+            $('.back').show()
+        }else{
+            $(this).show()
+            $('.back').show()
+        }
+        $('.active').siblings().each(function(){
+            hmb = $(this).data('num')*1
+
+            if(hmb == numb+1){
+                $('.active').hide()
+                $('.active').removeClass('active')
+                $(this).addClass('active')
+                $(this).show()
+            }
+        })
+    })
+
+    $('.back').click(function(){
+        numb = $('.active').data('num')*1
+        if(numb == 2){
+            $(this).hide()
+            $('.next').show()
+        }else{
+            $(this).show()
+            $('.next').show()
+        }
+        $('.active').siblings().each(function(){
+            hmb = $(this).data('num')*1
+
+            if(hmb == numb-1){
+                $('.active').hide()
+                $('.active').removeClass('active')
+                $(this).addClass('active')
+                $(this).show()
+            }
+        })
+    })
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include partials/head.ejs %>
+</head>
+
+<body>
+
+    <% include partials/topbar.ejs %>
+
+        <div id="content">
+            <div id="main">
+                <h1><%= name %></h1>
+                <p class="alias"><%= alias %></p>
+                <div id="lrmain">
+                <div id="lmain">
+                    <div class="stats" style="margin-left:75px;">
+                        <h3>Statistics</h3>
+                        <ul>
+                            <li>Popularity:
+                                <%= pop %>
+                            </li>
+                            <br><br>
+                            <li>Success rate:
+                                <%= sr %>
+                            </li>
+                            <br><br>
+                            <li>Avg Adaptation difficulty:
+                                <%= ad %>
+                            </li>
+                            <br><br>
+                            <li>Avg Adaptation time:
+                                <%= at %>
+                            </li>
+                            <br><br>
+                            <li>Avg Social impact:
+                                <%= si %>
+                            </li>
+                            <br><br>
+                            <li>Avg Sleep duration:
+                                <%= sd %>
+                            </li>
+                            <br><br>
+                            <li>Reccomended by:
+                                <%= recc %>
+                            </li><br><br>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="rmain">
+                    <img width="45%" src="/images/<%= sched %>.png">
+                </div>
+            </div>
+
+
+                <h3>Summary</h3>
+                <p><%= desc %></p>
+
+                <div class="tableHolder"></div>
+            </div>
+
+        </div>
+
+
+<div id="secrat" style="display:none;"><%= table %></div>
+<script>
+$(document).ready(function(){
+    let test = '<%= pop %>'.replace('%','')
+    if(isNaN(test)){
+        $('.stats').html('<h3>Statistics</h3><h4>No data has been submitted for this schedule yet!<br><a style="color:#d3d3d3;" href="/submit">Be the first</a></h4>')
+    }else{
+        $('.tableHolder').html($('#secrat').text())
+    }
+    $('table').tablesorter();
+})
+</script>
+
+</body>
+
+</html>

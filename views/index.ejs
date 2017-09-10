@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include partials/head.ejs %>
+</head>
+
+<body>
+
+    <% include partials/topbar.ejs %>
+
+    <div id="content">
+        <div id="main">
+            <h1>polyDB</h1>
+            <p>polyDB is dedicated to gathering and displaying user collected data on polyphasic sleeping in an easy to understand format.</p>
+	    <div id="lmain">
+	      <h2><a href="schedules">Schedule Directory</a></h2>
+	    </div>
+	    <div id="rmain">
+	      <h2><a href="submit">Submit your experience</a></h2>
+	    </div>
+
+<div class="tableHolder">
+	    <!-- <input type="text" id="tablesearch" onkeyup="searchTable()" placeholder="Search for schedules..">
+	    <br><br>
+	    <table class="tablesorter" style="width:100%;" id="maindata">
+	      <thead>
+		<tr class="tablehead">
+		  <th>Schedule</th>
+		  <th>Popularity</th>
+		  <th>Success Rate</th>
+		  <th>Avg Adaptation Difficulty</th>
+          <th>Avg Adaptation Time</th>
+          <th>Avg Social Impact</th>
+          <th>Avg Sleep Duration</th>
+          <th>Reccomended by</th>
+		</tr>
+	      </thead>
+
+	      <tbody>
+		<tr class="sched">
+		  <td>Memers</td>
+		  <td>63%</td>
+		  <td>420%</td>
+		  <td>6m</td>
+		</tr>
+		<tr class="sched">
+		  <td>Dawg</td>
+		  <td>69%</td>
+		  <td>190%</td>
+		  <td>10s</td>
+		</tr>
+		<tr class="sched">
+		  <td>WDawg</td>
+		  <td>No data</td>
+		  <td>No data</td>
+		  <td>No data</td>
+		</tr>
+
+	      </tbody>
+	    </table> -->
+    </div>
+        </div>
+    </div>
+
+<div id="secrat" style="display:none;"><%= html %></div>
+<script>
+$(document).ready(function(){
+    $('.tableHolder').html($('#secrat').text())
+    $('table').tablesorter();
+})
+</script>
+</body>
+
+</html>

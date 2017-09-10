@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include partials/head.ejs %>
+</head>
+
+<body>
+  <% include partials/topbar.ejs %>
+
+    <div id="content">
+        <div id="main">
+            <span style="float:left;">
+                <h2>Schedules</h2>
+                <ul class="list">
+                    <!-- <li><a href="schedules/biphasic">Biphasic</a></li> -->
+
+                </ul>
+
+            </span>
+        </div>
+    </div>
+
+<div id="secrat" style="display:none;">
+    <%= list %>
+</div>
+<script>
+$(document).ready(function(){
+    $('.list').html($('#secrat').text())
+})
+</script>
+</body>
+
+</html>
